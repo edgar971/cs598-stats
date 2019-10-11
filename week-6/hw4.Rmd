@@ -1,0 +1,42 @@
+---
+title: 'STAT 542 / CS 598: Example Homework'
+author: "Spring 2019, by Ruoqing Zhu (rqzhu)"
+date: 'Due: Yesterday'
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 2
+---
+
+## Question 1 [70 Points] Tuning Random Forests in Virtual Twins
+
+### Randomly split the data into 75% for training and 25% for testing.
+
+### Answer: 
+
+```{r}
+  health_data= read.csv("data/sepsis.csv")
+```
+
+## Question 2 (50 Points) Write `R` Functions
+
+Write an R function that outputs the first $n$ terms in the Fibonacci sequence, where $n$ is the only input value of the function. 
+
+### Answer: 
+
+```{r}
+  # construct the function 
+  fibonacci <- function(n)
+  {
+    x = numeric(n)
+    x[1:2] = c(1,1)
+    for(i in 3:n) x[i] = x[i-1] + x[i-2]
+    return(x)
+  }
+
+  # test the function 
+  fibonacci(10)
+```
+
+
+
